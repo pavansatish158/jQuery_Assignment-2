@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="jQuery slider & Tabs">
+  <meta name="author" content="Pavan Satish Kutha">
+  <title>jQuery</title>
+  <!-- style sheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href = "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href = "https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel = "stylesheet">
+  <script src = "https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <!-- external style sheet -->
+  <link rel="stylesheet" type="text/css" href="./assets/css/style.css">  
+</head>
+<body>       <!-- body starting -->
+  <div class="main">
+    <div id="header" style="position: relative;z-index: 999;">
+      <div id="logo">   <!-- logo for header -->
+        <div id="text">
+          <a href="https://www.inkakinada.com/" title="inkakinada.com">
+          <img src="http://www.inkakinada.com/images/kakinada.jpg" alt="inkakinada.com logo"></a>
+        </div>
+      </div>
+    </div>
+    <div class="tabs">      <!-- Tabs starting -->
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#home">Home</a></li>
+        <li><a href="#jobs">Jobs</a></li>
+        <li><a href="#rentals">Rentals</a></li>
+        <li><a href="#movies">Movies</a></li>
+        <li><a href="#aboutus">About Us</a></li>
+      </ul>                 <!-- Tabs ending -->
+      <div class="tab-content">  <!--  tab content starting -->
+        <div id="home"class="tab-pane fade in active">
+          <h3><b>InKakinada</b> let's you explore the kakinada city.</h3>
+          <p> Note: Below image slider represents the slider and the above Home, Jobs, Rentals, Movies, About Us represents the tabs.</p>
+          <div id="slider" class="slider">
+            <div ><img class="slides" src="https://i.ytimg.com/vi/K-_emhCK5CA/maxresdefault.jpg"/"></div>
+            <div ><img class="slides" src="https://i.ytimg.com/vi/YedebD0-VaQ/maxresdefault.jpg"></div>
+            <div ><img class="slides" src="https://i.ytimg.com/vi/x5pjycv6_6A/maxresdefault.jpg"></div>
+            <div ><img class="slides" src="http://kakinadaseaports.in/wp-content/uploads/2013/12/slide-services.jpg"></div>
+            <button name="prev" class="btn" id="btn1">&#10094;</button>
+            <button name="next" class="btn" id="btn2">&#10095;</button>
+          </div>
+        </div>
+        <div id="jobs" class="tab-pane fade">
+          <h3>In this <b>Jobs portal</b>, you can find any kind of job that match your skills.</h3>
+          <p>Input your email address to get latest job alerts to your inbox.</p>
+          <label for="jobalerts">Email:</label>  <!-- Tool-tip for email -->
+          <input id="alert" title="Please subscribe for latest job alerts." placeholder="xxxxxx@mail.com">
+          <a class="btn" data-popup-open="popup-1" href="#">Submit</a>    <!-- Modal popup -->
+          <div class="popup" data-popup="popup-1">
+            <div class="popup-inner">
+              <h2>Successfully submitted!</h2>
+              <p> Latest Job alerts will be sent your registered e-mail.</p>
+              <p><a data-popup-close="popup-1" href="#">Close</a></p>
+              <a class="popup-close" data-popup-close="popup-1" href="#">x</a>
+            </div>
+          </div>
+          <p><h4>Note</h4>
+            <li>*Hover at the E-mail input field to see <b>Tool-tip</b> and
+            *Click on to "submit" button to see <b> modal-box.</b></li></p>
+          </div>
+          <div id="rentals" class="tab-pane fade">
+            <h3>This section contains various rental information of kakinada city. </h3>
+            <p>Please search areas in kakinada city and find information you want.</p>
+            <div class="ui-widget" style="margin-top: 30px;">          <!--  type-a-head/Auto complete -->
+              <label for="automplete-6">Search Areas: </label>
+              <input id="automplete-6">
+            </div>
+            <p style="margin-top: 100px;"><h4>Note:</h4>
+              <li>*Type-in kakinada area names in the above input field, you will see<b> Type-a-head(Auto compelte)</b></li><br>
+            </p>
+          </div>
+          <div id="movies" class="tab-pane fade">              <!-- light box -->
+            <h3>Here are the latest hit movies list.</h3>
+            <img class="thumb_gallery" src="./assets/images/1.jpg" alt="Image Caption" style="width: 300px; height: 200px;">
+            <img class="thumb_gallery" src="./assets/images/2.jpg" alt="Image Caption" style="width: 300px; height: 200px;">
+            <img class="thumb_gallery" src="./assets/images/3.jpg" alt="Image Caption" style="width: 300px; height: 200px;">
+            <img class="thumb_gallery" src="./assets/images/4.jpg" alt="Image Caption" style="width: 300px; height: 200px;">
+            <img class="thumb_gallery" src="./assets/images/5.jpg" alt="Image Caption" style="width: 300px; height: 200px;">
+            <br>
+            <div id="background_overlay"></div>
+          </div>
+          <div id="aboutus" class="tab-pane fade">
+            <h3><center>--Our Mission--</center></h3>
+            <h4><center>To provide information about the kakinada  city.</center></h4>
+            <h3><center>About</center></h3>
+            <p style="padding: 10px;">InKakinada is maintained by <b>Nyros Technologies.</b> Here we give the latest information about the kakinada city
+            </p>
+            <p style="padding: 10px;">Welcome to Nyros Technologies, your number one source for mobile & web development. We're dedicated to giving you the very best of  product, with a focus on three characteristics, ie: dependability, customer service and uniqueness.<br>
+            Founded in 2006 by Pavan kumar Mangalampalli and  we now serve customers all over places like India, the US, the world, and are thrilled to be a part of the fair trade wing of the information technology industry.<br>
+            We hope you enjoy our products as much as we enjoy offering them to you. If you have any questions or comments, please don't hesitate to contact us.</p>
+            <!-- star rating -->
+            <h3 style="color: blue;"><center>Rate this website.</center></h3>
+            <section class='rating-widget'>
+            <!-- Rating Stars Box -->
+            <div class='rating-stars text-center'>
+              <ul id='stars'>
+                <li class='star' title='Poor' data-value='1'>
+                  <i class='fa fa-star fa-fw'></i>
+                </li>
+                <li class='star' title='Fair' data-value='2'>
+                  <i class='fa fa-star fa-fw'></i>
+                </li>
+                <li class='star' title='Good' data-value='3'>
+                  <i class='fa fa-star fa-fw'></i>
+                </li>
+                <li class='star' title='Excellent' data-value='4'>
+                  <i class='fa fa-star fa-fw'></i>
+                </li>
+                <li class='star' title='WOW!!!' data-value='5'>
+                  <i class='fa fa-star fa-fw'></i>
+                </li>
+              </ul>
+            </div>     
+            <div class='success-box'>
+              <div class='clearfix'></div>
+              <div class='text-message'></div>
+              <div class='clearfix'></div>
+            </div>
+          </section>
+        </div>
+      </div>                             <!--  Tab content ending -->
+    </div>
+  </div>                                       
+  <div class="clear"></div>
+  <!-- External script source -->
+  <script src="./assets/js/script.js"></script>
+</body>                                   <!-- body ending -->
+</html>
